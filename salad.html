@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salad - Tasty Vibes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet"/>
+</head>
+
+<body>
+    <a href="cart.html" id="cart-button">
+      🛒
+      <span id="cart-count">0</span>
+    </a>
+    <section class="menu salad-menu">
+        <h1 class="section-title">Salad Menu</h1>
+        <a href="index.html" class="back-btn">← Back to Home</a>
+
+        <div class="menu-grid">
+            <div class="dish-card" onclick="addToCart(this)" data-name="Greek Salad" 
+                    data-price="7.99" data-img="assets/images/greek_salad.jpg">
+                <img src="assets/images/greek_salad.jpg" alt="Greek Salad" />
+                <h3>Greek Salad</h3>
+                <p class="ingredients">Tomato, cucumber, red onion, olives, feta cheese, oregano, olive oil</p>
+                <p class="price">$7.99</p>
+            </div>
+            
+            <div class="dish-card" onclick="addToCart(this)" data-name="Caesar Salad" 
+                    data-price="6.49" data-img="assets/images/caesar_salad.jpg">
+                <img src="assets/images/caesar_salad.jpg" alt="Caesar Salad" />
+                <h3>Caesar Salad</h3>
+                <p class="ingredients">Romaine lettuce, croutons, parmesan, Caesar dressing</p>
+                <p class="price">$6.49</p>
+            </div>
+
+            <div class="dish-card" onclick="addToCart(this)" data-name="Quinoa Avocado Salad"
+                    data-price="8.99" data-img="assets/images/quinoa_avocado_salad.webp">
+                <img src="assets/images/quinoa_avocado_salad.webp" alt="Quinoa Avocado Salad" />
+                <h3>Quinoa Avocado Salad</h3>
+                <p class="ingredients">Quinoa, avocado, corn, black beans, cherry tomatoes, cilantro</p>
+                <p class="price">$8.99</p>
+            </div>    
+
+            <div class="dish-card" onclick="addToCart(this)" data-name="Chicken Pasta Salad"
+                    data-price="9.49" data-img="assets/images/chicken_pasta_salad.jpg">
+                <img src="assets/images/chicken_pasta_salad.jpg" alt="Chicken Pasta Salad" />
+                <h3>Chicken Pasta Salad</h3>
+                <p class="ingredients">Pasta, grilled chicken, spinach, cherry tomatoes, feta, Italian dressing</p>
+                <p class="price">$9.49</p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

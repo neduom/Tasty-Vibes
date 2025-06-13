@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake - Tasty Vibes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <a href="cart.html" id="cart-button">
+      🛒
+      <span id="cart-count">0</span>
+    </a>
+    
+    <section class="menu cake-menu">
+        <h1 class="section-title">Cake Menu</h1>
+        <a href="index.html" class="back-btn">← Back to Home</a>
+
+        <div class="menu-grid">
+
+            <div class="dish-card" onclick="addToCart(this)" data-name="Chocolate Cake"
+                    data-price="5.49" data-img="assets/images/chocolate_cake.jpg">
+              <img src="assets/images/chocolate_cake.jpg" alt="Chocolate Cake" />
+              <h3>Chocolate Cake</h3>
+              <p class="ingredients">Rich chocolate sponge, ganache frosting</p>
+              <p class="price">$5.49</p>
+            </div>
+
+            <div class="dish-card" onclick="addToCart(this)" data-name="Strawberry Pancakes"
+                    data-price="4.99" data-img="assets/images/strawberry-pancakes.jpg">
+              <img src="assets/images/strawberry-pancakes.jpg" alt="Strawberry Pancakes" />
+              <h3>Strawberry Pancakes</h3>
+              <p class="ingredients">Fluffy pancakes, fresh strawberries, maple syrup</p>
+              <p class="price">$4.99</p>
+            </div>
+
+            <div class="dish-card" onclick="addToCart(this)" data-name="Classic Crepe"
+                    data-price="4.59" data-img="assets/images/classic_crep.webp">
+              <img src="assets/images/classic_crep.webp" alt="Classic Crepe" />
+              <h3>Classic Crepe</h3>
+              <p class="ingredients">Thin crepe, Nutella, banana slices, fresh strawberries</p>
+              <p class="price">$4.59</p>
+            </div>
+
+            <div class="dish-card" onclick="addToCart(this)" data-name="Red Velvet"
+                    data-price="5.29" data-img="assets/images/red_velvet_slice.webp">
+              <img src="assets/images/red_velvet_slice.webp" alt="Red Velvet Slice" />
+              <h3>Red Velvet</h3>
+              <p class="ingredients">Velvety sponge, cream cheese frosting</p>
+              <p class="price">$5.29</p>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

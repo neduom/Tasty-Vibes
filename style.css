@@ -1,0 +1,757 @@
+body {
+  background-color: #000;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
+
+h1 span {
+    color: #FFD700;
+    text-shadow: 0 0 10px #FFD700;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.circle-logo {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 4px solid #FFD700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.icons-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons-ring img {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    filter: brightness(1.2) drop-shadow(0 0 5px #FFD700);
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.1); opacity: 1; }
+}
+
+.slogan {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #fff;
+    opacity: 0.85;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border: 2px solid #FFD700;
+    color: #FFD700;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #FFD700;
+    color: black;
+}
+
+.menu {
+    padding: 2rem 1rem;
+    background-color: #000;
+    color: #FFD700;
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #FFD700;
+    text-shadow: 0 0 8px #FFD700;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.menu-card {
+    background-color: #111;
+    border-radius: 12px;
+    padding: 1.2rem 1rem 1.5rem;
+    box-shadow: 0 0 10px #FFD700AA;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #FFD700;
+}
+
+.menu-card img {
+    width: 80px;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 4px #FFD700);
+    transition: filter 0.3s ease;
+}
+
+.menu-card:hover img {
+  filter: drop-shadow(0 0 8px #FFD700);
+}
+
+.menu-card h3 {
+  color: #FFD700;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #FFD700AA;
+}
+
+
+.menu-card .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #FFD700;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  user-select: none;
+}
+
+.menu-card:hover .overlay {
+  opacity: 1;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+}
+
+.modal-content {
+    background-color: #111;
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 600px;
+    width: 90%;
+    color: #FFD700;
+    box-shadow: 0 0 25px #FFD700;
+    position: relative;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.close {
+  position: absolute;
+  top: 15px; right: 20px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #FFD700;
+  font-weight: bold;
+  user-select: none;
+}
+
+#modal-body h2 {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+#modal-body h2 {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+#modal-body strong {
+  font-size: 1.1rem;
+  flex: 1;
+}
+
+#modal-body p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 0;
+}
+
+.menu-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.pizza-menu {
+    background-color: #000;
+    padding: 2rem;
+    color: #FFD700;
+    text-align: center;
+}
+
+.pizza-grip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.pizza-item {
+    background-color: #111;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: transparent 0.3s ease;
+}
+
+.pizza-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #FFD70066;
+}
+
+.pizza-item img {
+    width: 90%;
+    height: 180px;
+    object-fit: cover;
+    image-rendering: auto;
+}
+
+.info {
+  padding: 1rem;
+}
+
+.info h3 {
+    margin-bottom: 0.3rem;
+    color: #FFD700;
+    text-transform: uppercase;
+}
+
+.info p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.price {
+  display: inline-block;
+  margin-top: 0.8rem;
+  background-color: #FFD700;
+  color: #000;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.back-btn {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #FFD700; /* الدهبي */
+  color: #FFD700;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #FFD700;
+  color: #000;
+  box-shadow: 0 0 10px #FFD700;
+}
+
+.sub-header {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sub-header h1 {
+  font-size: 36px;
+  color: #FFD700;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 18px;
+  background-color: transparent;
+  border: 2px solid #FFD700;
+  color: #FFD700;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #FFD700;
+  color: #000;
+  box-shadow: 0 0 8px #FFD700;
+}
+
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 40px 20px;
+  background-color: #111;
+}
+
+.item-card {
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.item-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.item-card h3 {
+  margin: 10px 0 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: #FFD700;
+}
+
+.item-card .price {
+  margin-bottom: 15px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.4) contrast(1.2);
+}
+
+.menu-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.menu-item img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+.menu-item {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  width: 220px;
+}
+.menu-item h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #FFD700;
+}
+.menu-item p {
+  color: #eee;
+}
+
+.menu-item .price{
+  margin-bottom: 15px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.salad-menu {
+  padding: 60px 20px;
+  background: #0d0d0d;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.salad-menu .section-title {
+  color: gold;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.dish-card {
+  background-color: #111;
+  border: 1px solid #333;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.dish-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.dish-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.dish-card h3 {
+  margin: 15px 0 10px;
+  color: gold;
+  font-size: 1.5rem;
+}
+
+.dish-card .ingredients {
+  font-size: 0.95rem;
+  color: #ccc;
+  padding: 0 10px;
+}
+
+.dish-card .price {
+  margin-bottom: 15px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.cart-summary {
+  max-width: 600px;
+  margin: 40px auto 20px;
+  text-align: center;
+  background-color: #111;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+#total-price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #FFD700;
+  margin-bottom: 15px;
+}
+
+.clear-btn {
+  padding: 10px 25px;
+  background-color: transparent;
+  border: 2px solid #FFD700;
+  color: #FFD700;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background-color: #FFD700;
+  color: #000;
+  box-shadow: 0 0 10px #FFD700;
+}
+
+#cart-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #FFD700;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+#cart-button:hover {
+  background-color: #e6c200;
+}
+
+#cart-button span#cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-page h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #FFD700;
+  text-align: center;
+  text-shadow: 0 0 5px #FFD700, 0 0 10px;
+  margin-bottom: 1.5rem;
+}
+
+.remove-btn {
+  background-color: #c65c5c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.remove-btn:hover {
+  background-color: #630101;
+  transform: scale(1.05);
+}
+
+.checkout-form {
+  margin-top: 2rem;
+  background: #0d0d0d;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.checkout-form h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #FFD700;
+  text-align: center;
+  text-shadow: 0 0 5px #FFD700, 0 0 10px;
+  margin-bottom: 1.5rem;
+}
+
+.checkout-form input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.checkout-form button {
+  width: 100%;
+  background-color: #FFD700AA;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.checkout-form button:hover {
+  background-color: #FFD700;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #000;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#confirm-order-btn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+#confirm-order-btn:hover {
+  background-color: #1e8449;
+}
+
+body.payment-page {
+  font-family: 'Poppins', sans-serif;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+h1 {
+  color: #bcaeae;
+  margin-bottom: 1rem;
+}
+
+#payment-form {
+  background: #b1a2a2;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#payment-form input {
+  padding: 0.8rem 1rem;
+  border: 1px solid #e0d3d3;
+  border-radius: 8px;
+}
+
+#payment-form button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#payment-form button:hover {
+  background: #45a049;
+}
+
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dish-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .checkout-form form {
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+  }
+
+  input, button {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

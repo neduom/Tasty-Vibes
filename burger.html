@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burgers - Tasty Vibes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet"/>
+</head>
+
+<body>
+    <a href="cart.html" id="cart-button">
+      🛒
+      <span id="cart-count">0</span>
+    </a>
+    <section class="menu burger-menu">
+        <h1 class="section-title">Burger Menu</h1>
+        <a href="index.html" class="back-btn">← Back to Home</a>
+
+        <div class="menu-grid">
+
+            <div class="dish-card" onclick="addToCart(this)" data-name="Classic Beef Burger"
+                    data-price="8.99" data-img="assets/images/Classic-Beef-Burge.webp">
+                <img src="assets/images/Classic-Beef-Burge.webp" alt="Classic Beef Burger" />
+                <h3>Classic Beef Burger</h3>
+                <p class="ingredients">Beef patty, cheddar, lettuce, tomato, pickles, house sauce</p>
+                <p class="price">$8.99</p>
+            </div>
+
+            <div class="dish-card" onclick="addToCart(this)" data-name="Cheese Explosion"
+                    data-price="9.49" data-img="assets/images/cheese_explosion.jpg">
+                <img src="assets/images/cheese_explosion.jpg" alt="Cheese Explosion Burger" />
+                <h3>Cheese Explosion</h3>
+                <p class="ingredients">Beef patty, double cheddar, crispy onions, spicy mayo</p>
+                <p class="price">$9.49</p>
+            </div>
+
+            <div class="dish-card" onclick="addToCart(this)" data-name=" Grilled Chicken Burger"
+                    data-price="8.29" data-img="assets/images/grilled_chicken_burger.jpg">
+                <img src="assets/images/grilled_chicken_burger.jpg" alt="Chicken Burger" />
+                <h3>Grilled Chicken Burger</h3>
+                <p class="ingredients">Grilled chicken, lettuce, tomato, garlic sauce, brioche bun</p>
+                <p class="price">$8.29</p>
+            </div>
+
+            <div class="dish-card" onclick="addToCart(this)" data-name="Veggie Delight"
+                    data-price="7.99" data-img="assets/images/veggie_delight.avif">
+                <img src="assets/images/veggie_delight.avif" alt="Veggie Burger" />
+                <h3>Veggie Delight</h3>
+                <p class="ingredients">Chickpea patty, avocado, arugula, tomato, vegan mayo</p>
+                <p class="price">$7.99</p>
+            </div>
+
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

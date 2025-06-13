@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee - Tasty Vibes</title>
+    <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <a href="cart.html" id="cart-button">
+      🛒
+      <span id="cart-count">0</span>
+    </a>
+    <header class="sub-header">
+        <h1>Coffe Menu</h1>
+        <a href="index.html" class="back-btn">← Back to Home</a>
+    </header>
+
+    <section class="item-grid">
+        <div class="item-card" onclick="addToCart(this)" data-name="Espresso"
+                data-price="1.80" data-img="assets/images/espresso.jpg">
+            <img src="assets/images/espresso.jpg" alt="Espresso">
+            <h3>Espresso</h3>
+            <p class="price">$1.80</p>
+        </div>
+
+        <div class="item-card" onclick="addToCart(this)" data-name="Cappuccino"
+                data-price="2.20" data-img="assets/images/cappuccino.webp">
+            <img src="assets/images/cappuccino.webp" alt="Cappuccino">
+            <h3>Cappuccino</h3>
+            <p class="price">$2.20</p>
+        </div>
+
+        <div class="item-card" onclick="addToCart(this)" data-name="Latte"
+                data-price="2.40" data-img="assets/images/latte.jpg">
+            <img src="assets/images/latte.jpg" alt="Latte">
+            <h3>Latte</h3>
+            <p class="price">$2.40</p>
+        </div>
+
+        <div class="item-card" onclick="addToCart(this)" data-name="Mocha"
+                data-price="2.60" data-img="assets/images/mocha.avif">
+            <img src="assets/images/mocha.avif" alt="Mocha">
+            <h3>Mocha</h3>
+            <p class="price">$2.60</p>
+        </div>
+
+        <div class="item-card" onclick="addToCart(this)" data-name="Americano"
+                data-price="2.00" data-img="assets/images/americano.jpg">
+            <img src="assets/images/americano.jpg" alt="Americano">
+            <h3>Americano</h3>
+            <p class="price">$2.00</p>
+        </div>
+
+        <div class="item-card" onclick="addToCart(this)" data-name="Iced Coffee"
+                data-price="2.30" data-img="assets/images/icedcoffee.avif">
+            <img src="assets/images/icedcoffee.avif" alt="Iced Coffee">
+            <h3>Iced Coffee</h3>
+            <p class="price">$2.30</p>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

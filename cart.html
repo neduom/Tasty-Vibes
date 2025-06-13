@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet"/>
+
+</head>
+<body class="cart-page">
+  <a href="cart.html" id="cart-button">
+    🛒
+    <span id="cart-count">0</span>
+  </a>
+
+  <h1>Your Basket</h1>
+  <a href="index.html" class="back-btn">← Back to Home</a>
+  <div id="cart-items" class="menu-grid"></div>
+
+  <div class="cart-summary">
+    <div id="total-price">Total: $0.00</div>
+    <button class="clear-btn" onclick="clearCart()">Clear Cart</button>
+  </div>
+
+  <div class="checkout-form">
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Confirm Your Order</h2>
+            <div id="confirmation-details"></div>
+            <button id="confirm-order-btn">Confirm Order</button>
+        </div>
+    </div>
+  <h2>Checkout</h2>
+  <form id="order-form">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="email" id="email" placeholder="Your Email" required />
+    <input type="text" id="address" placeholder="Your Address" required />
+    <input type="tel" id="phone" placeholder="Phone Number" required />
+    <button type="submit">Place Order</button>
+  </form>
+  <div id="order-success" style="display:none; color: green; margin-top: 1rem;">
+    ✅ Order sent successfully!
+  </div>
+</div>
+  <script src="script.js"></script>
+
+</body>
+</html>

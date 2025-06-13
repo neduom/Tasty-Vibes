@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza - Tasty Vibes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a href="cart.html" id="cart-button">
+    🛒
+    <span id="cart-count">0</span>
+  </a>
+    <section class="menu pizza-menu">
+        <h1 class="section-title">Pizza Menu</h1>
+        <a href="index.html" class="back-btn">← Back to Home</a>
+    <div class="pizza-grid">
+
+    <div class="pizza-item" onclick="addToCart(this)" data-name="Margherita"
+        data-price="12.99" data-img="assets/images/pizza1.webp">
+      <img src="assets/images/pizza1.webp" alt="Margherita">
+      <div class="info">
+        <h3>Margherita</h3>
+        <p>Classic red sauce, fresh mozzarella, fresh basil leaves, sliced tomatoes.</p>
+        <span class="price">$12.99</span>
+      </div>
+    </div>
+
+    <div class="pizza-item" onclick="addToCart(this)" data-name="Pepperoni passion"
+        data-price="14.99" data-img="assets/images/pizza2.jpg">
+      <img src="assets/images/pizza2.jpg" alt="Pepperoni">
+      <div class="info">
+        <h3>Pepperoni passion</h3>
+        <p>Tomato sauce, mozzarella cheese, Pepperoni slices, black olives, red pepper flakes.</p>
+        <span class="price">$14.99</span>
+      </div>
+    </div>
+
+    <div class="pizza-item" onclick="addToCart(this)" data-name="Veggie Delight"
+        data-price="13.99" data-img="assets/images/pizza3.jpg">
+      <img src="assets/images/pizza3.jpg" alt="Pepperoni">
+      <div class="info">
+        <h3>Veggie Delight</h3>
+        <p>Tomato sauce, mozzarella cheese, bell peppers, red onions, mushrooms, spinach.</p>
+        <span class="price">$13.99</span>
+      </div>
+    </div>
+
+    <div class="pizza-item" onclick="addToCart(this)" data-name="Meat Lover"
+        data-price="15.99" data-img="assets/images/pizza4.jpg">
+      <img src="assets/images/pizza4.jpg" alt="Pepperoni">
+      <div class="info">
+        <h3>Meat Lover</h3>
+        <p>Tomato sauce, mozzarella, sausage, meat.</p>
+        <span class="price">$15.99 </span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
